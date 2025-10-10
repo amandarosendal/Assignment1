@@ -1,14 +1,14 @@
-/* Bakgrund: ljusrosa */
+/*Body betyder hela hemsidan, allt som syns, här ställer man in grund-utseendet*/
 * { box-sizing: border-box; }
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #ffe6ef; /* ljusrosa */
+    background: #ffe6ef;
     color: #222;
     text-align: center;
 }
 
-/* Vita “bars” (som din tidigare blå bar, fast vit) */
+/*bar är mina vita remsor på hemsidan. */
 .bar {
     padding: 16px 20px;
     border-bottom: 1px solid rgba(0,0,0,0.06);
@@ -18,50 +18,51 @@ body {
     background: #ffffff;
     color: #222;
 }
-
+/*main är sidans huvudinnehåll, där dde viktiga finns, här kan jag fixa till layout med mera */
 main {
     padding: 24px;
     max-width: 820px;
     margin: 0 auto;
 }
 
-/* Liten under-rubrik */
+/*subtitle är rubriken under huvudrubriken */
 .subtitle {
     margin-top: 8px;
     margin-bottom: 16px;
     opacity: 0.8;
 }
-/* ===== Storlek för bilden (override) ===== */
+/*img.dog-photo är bilden på hunden, hur stor den ska vara, vart den är placerad */
 img.dog-photo {
-    width: 360px !important;    /* ändra till 420px/480px om du vill större */
-    max-width: 90% !important;  /* blir mindre på mobil */
-    height: auto !important;
+    width: 360px
+    max-width: 90%
+    height: auto
     display: block;
     margin: 16px auto 20px;
 }
 
-/* Knapp + feedback-text */
+/*button är knappen användaren trycker på. Här styr man utseendet på den */
 button {
     border: 0;
     padding: 12px 20px;
     border-radius: 10px;
     cursor: pointer;
-    background: #ff7fb4; /* rosa knapp som poppar */
+    background: #ff7fb4;
     color: #fff;
     font-weight: 700;
-    text-transform: lowercase; /* matchar din text */
+    text-transform: lowercase;
     letter-spacing: 0.2px;
 }
 button:hover { filter: brightness(0.95); }
 
+/*msg är texten "jag är snäll" så här kan man styra hur den ska se ut, text, färg med mera */
 #msg {
     margin-top: 12px;
     font-weight: 700;
-    color: #b3005e; /* mörkare rosa/lila för kontrast */
-    min-height: 1.2em; /* så sidan inte hoppar innan texten syns */
+    color: #b3005e;
+    min-height: 1.2em;
 }
 
-/* Footer-baren speglar headern */
+/*footer.bar är sidans nedersta del, den vita remsan längst ner */
 footer.bar {
     margin-top: 28px;
     border-top: 1px solid rgba(0,0,0,0.06);
