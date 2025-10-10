@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hunden Bella – Maltipoo</title>
+
+    <style>
+        /* ======= CSS (utseende) ======= */
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffe6ef;           /* ljusrosa bakgrund */
+            color: #222;
+            text-align: center;
+        }
+
+        /* Vita “bars” överst och nederst */
+        .bar {
+            background: #fff;
+            color: #222;
+            padding: 16px 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
+        }
+        footer.bar {
+            margin-top: 28px;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            border-bottom: 0;
+        }
+
+        main {
+            padding: 24px;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .subtitle {
+            margin: 8px 0 16px;
+            opacity: 0.85;
+        }
+
+        /* Stor bild i mitten, responsiv men inte för gigantisk */
+        .dog-photo {
+            display: block;
+            margin: 16px auto 20px auto;
+            width: min(85%, 560px);  /* justera här om du vill mindre/större */
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            background: #fff;
+        }
+
+        button {
+            border: 0;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #ff7fb4;     /* rosa knapp */
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            /* Viktigt: INGEN text-transform här så T förblir stort */
+        }
+        button:hover { filter: brightness(0.95); }
+
+        #msg {
+            margin-top: 12px;
+            font-weight: 700;
+            color: #b3005e;
+            min-height: 1.2em; /* förhindra hopp innan text dyker upp */
+        }
+    </style>
+</head>
+<body>
+<!-- Vit toppbar (ersätter blå tidigare), texten ska vara "Hunden Bella" -->
+<header class="bar">
+    <h1>Hunden Bella</h1>
+</header>
+
+<main>
+    <p class="subtitle">Maltipoo – världens mysigaste fluff 💗</p>
+    <img src="bella.jpg"
+         alt="Maltipoo-hunden Bella"
+         class="dog-photo"
+         style="width: 420px; height: auto;" />
+
+    <!-- Knapp + meddelande -->
+    <button id="btn">Tryck här och se om jag är snäll</button>
+    <p id="msg" aria-live="polite"></p>
+</main>
+
+<!-- Vit bottenbar med önskad text -->
+<footer class="bar">
+    <small>Projekt gjort av Amanda Rosendal</small>
+</footer>
+
+<script>
+    // ======= JavaScript (funktion) =======
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('btn');
+        const msg = document.getElementById('msg');
+
+        btn.addEventListener('click', () => {
+            msg.textContent = 'Jag är snäll!';
+        });
+    });
+</script>
+</body>
+</html>
