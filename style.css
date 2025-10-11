@@ -31,14 +31,6 @@ main {
     margin-bottom: 16px;
     opacity: 0.8;
 }
-/*img.dog-photo är bilden på hunden, hur stor den ska vara, vart den är placerad */
-img.dog-photo {
-    width: 360px
-    max-width: 90%
-    height: auto
-    display: block;
-    margin: 16px auto 20px;
-}
 
 /*button är knappen användaren trycker på. Här styr man utseendet på den */
 button {
